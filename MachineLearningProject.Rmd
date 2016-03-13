@@ -45,7 +45,7 @@ Explore Data.  We do not need to pre-process since there are no outliers.  Summa
 summary(measurements)
 ```
 
-Segment the measured data into training (75%) and testing(25%), and build the model.  Apply the final model against the quiz data.  The Linear Discriminant Analysis and Naive Bayes model did not provide a fit that equaled the Random Forest Approach.  Use the parallel and doParallel libray to spread the computational effort across multiple CPU cores.  List the predictors by descending importance.  The estimated error rate is listed on the row that says OOB estimate of  error rate.
+Segment the measured data into training (75%) and testing(25%), and build the model.  Apply the final model against the quiz data.  The Linear Discriminant Analysis and Naive Bayes model did not provide a fit that equaled the Random Forest Approach.  Use the parallel and doParallel libray to spread the computational effort across multiple CPU cores.  List the predictors by descending importance.  The estimated error rate is listed on the row that says OOB estimate of  error rate, less than 1%.
 ```{r buildmodel}
 set.seed(42)
 cl <- parallel::makeCluster(parallel::detectCores()-1)
